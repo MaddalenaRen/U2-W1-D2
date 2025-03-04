@@ -31,6 +31,13 @@ header {
   padding: 2em 1.5em;
 }
 
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
 @media screen and (min-width: 800px) {
   header {
     padding: 1em;
@@ -66,18 +73,7 @@ header {
     margin-bottom: 0;
   }
 
-  #underline {
-    width: 50%;
-    position: relative;
 
-  }
-
-  #underline img {
-    width: 50%;
-    position: relative;
-    left: 199px;
-    bottom: 25px;
-  }
 }
 
 header nav ul {
@@ -107,12 +103,81 @@ header nav li a::before {
   content: "\22c6\0020";
 }
 
+#buttons {
+  position: fixed;
+  right: 10px;
+  font-size: 20px;
+  color: #00a0c6;
+
+}
+
+#buttons span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 20%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  border: 1px solid #ddd;
+  z-index: 6;
+  text-align: center;
+  opacity: 0.8
+}
+
+#buttons :nth-child(2) {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 20%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  border: 1px solid #ddd;
+  z-index: 6;
+  text-align: center;
+  opacity: 0.8
+}
+
+
+#button {
+  position: fixed;
+  bottom: 3em;
+  right: 10px;
+  color: darkgoldenrod;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 20%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  border: 1px solid #ddd;
+  z-index: 6;
+  text-align: center;
+  opacity: 0.8
+}
+
 /* MAIN */
 main {
   background-color: #fff;
   box-shadow: 0 3px 3px #444;
   padding: 2em 1em;
   margin-bottom: 1.5em;
+}
+
+h1 span {
+  position: relative;
+  white-space: nowrap;
+}
+
+span img {
+  position: absolute;
+  width: 100%;
+  bottom: -17px;
+  left: 0px;
+  opacity: 0.5;
+
 }
 
 @media screen and (min-width: 700px) {
@@ -136,7 +201,11 @@ section h2 {
   font-weight: bold;
   background-color: #a3a3a3;
   padding: 0px 1em;
+  position: absolute;
+  top: -10%;
+  text-transform: uppercase;
 }
+
 
 /* ELEMENTI NEL MAIN - ARTICLE */
 
@@ -213,6 +282,12 @@ h1+p {
   border: 4px solid #00a0c6;
   outline: 4px solid #a02571;
   padding: 3px;
+  float: left;
+}
+
+article p:nth-of-type(3) {
+  clear: left;
+
 }
 
 ul,
@@ -432,4 +507,29 @@ footer a {
   .toTop {
     display: none;
   }
+}
+
+aside div {
+  position: relative;
+}
+
+.fa-tag {
+  font-size: 4em;
+  color: rgb(170, 170, 170);
+  position: absolute;
+  right: 2%;
+  top: 5%;
+}
+
+@media screen and (min-width:576) {
+  #buttons {
+    position: fixed;
+    top: 0px;
+  }
+
+  #button {
+    position: fixed;
+    bottom: 0px;
+  }
+
 }
